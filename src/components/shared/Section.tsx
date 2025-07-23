@@ -6,10 +6,11 @@ const cx = classNames.bind(styles)
 
 type Props = {
   children?: ReactNode
+  className?: string
 }
 
-function Section({ children }: Props) {
-  return <section className={cx('container')}>{children}</section>
+function Section({ children, className }: Props) {
+  return <section className={cx(['container', className])}>{children}</section>
 }
 
 export default Section
