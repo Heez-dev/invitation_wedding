@@ -4,11 +4,12 @@
 
 :root {
   --red: #ea7664;
-  --black: #544f4f;
+  --black: #2b2929;
   --brown: #89757a;
   --beige: #f6f5f5;
 }
 
 body {
   font-family: 'Source Serif 4', serif;
+  color: var(--black);
 }
