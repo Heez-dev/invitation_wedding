@@ -9,7 +9,7 @@ import tsPlugin from '@typescript-eslint/eslint-plugin'
 import jestPlugin from 'eslint-plugin-jest'
 
 export default defineConfig([
-  // 글로벌 무시 경로 
+  // 글로벌 무시 경로
   globalIgnores(['dist']),
   // 기본 ESLint 추천 설정 포함 (JavaScript 기본 룰셋)
   js.configs.recommended,
@@ -28,7 +28,7 @@ export default defineConfig([
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
-         project: './tsconfig.eslint.json',
+        project: './tsconfig.eslint.json',
       },
       globals: {},
     },
@@ -54,6 +54,21 @@ export default defineConfig([
         document: 'readonly',
         navigator: 'readonly',
         location: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        alert: 'readonly',
+        confirm: 'readonly',
+        prompt: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
       },
     },
   },
@@ -81,7 +96,13 @@ export default defineConfig([
 
   // ESLint 검사 제외할 파일/폴더
   {
-    ignores: ['src/vite-env.d.ts', '.yarn/**', '.pnp.*', 'eslint.config.*', 'tsconfig*.json'],
+    ignores: [
+      'src/vite-env.d.ts',
+      '.yarn/**',
+      '.pnp.*',
+      'eslint.config.*',
+      'tsconfig*.json',
+    ],
   },
 
   // Prettier 관련 설정을 마지막에 적용
