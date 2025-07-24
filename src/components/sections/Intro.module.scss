@@ -1,0 +1,38 @@
+@import '@scss/utils.scss';
+
+.container {
+  @include txt-content;
+
+  .wrap-persons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin: 42px 0 8px 0;
+
+    .icon-heart {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .wrap-location {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+  }
+
+  .icon-couple {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+  }
+
+  .wrap-message {
+    text-align: center;
+    line-height: 26px;
+  }
+}
