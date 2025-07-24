@@ -1,0 +1,32 @@
+.dimmed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 9999;
+
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+
+    // svg 안의 path 색상 지정
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: white; // 핵심
+    }
+
+    // 혹시 일부 path가 별도로 fill 지정 안 된 경우를 대비
+    path {
+      fill: white;
+    }
+  }
+}
