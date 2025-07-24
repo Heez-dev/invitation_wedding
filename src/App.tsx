@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import FullScreenMessage from '@shared/FullScreenMessage'
 import Heading from '@/components/sections/Heading'
 import type { Wedding } from '@/models/wedding'
+import Video from '@/components/sections/Video'
 
 const cx = classNames.bind(styles)
 
@@ -47,6 +48,7 @@ function App() {
   return (
     <div className={cx('container')}>
       <Heading date={date} />
+      <Video />
       {JSON.stringify(wedding)}
     </div>
   )
